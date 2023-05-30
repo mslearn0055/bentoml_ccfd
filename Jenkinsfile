@@ -3,7 +3,7 @@ node {
              sh 'curl -O https://bootstrap.pypa.io/get-pip.py'
              sh 'python3 get-pip.py'
              sh 'export PATH=LOCAL_PATH:$PATH'
-             sh 'source ~/.bashrc'
+             sh 'source /home/ubuntu/.bashrc'
              sh 'pip install pip'
          }
          stage("Git Clone"){
