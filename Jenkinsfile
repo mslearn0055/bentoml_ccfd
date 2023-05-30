@@ -5,6 +5,7 @@ node {
              sh 'export PATH=LOCAL_PATH:$PATH'
              sh 'source /home/ubuntu/.bashrc'
              sh 'pip install pip'
+             sh 'pip show pip'
          }
          stage("Git Clone"){
 
