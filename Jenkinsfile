@@ -1,4 +1,11 @@
 node {
+         stage("Activate python"){
+             sh 'curl -O https://bootstrap.pypa.io/get-pip.py'
+             sh 'python3 get-pip.py'
+             sh 'export PATH=LOCAL_PATH:$PATH'
+             sh 'source ~/.bashrc'
+             sh 'pip install pip'
+         }
          stage("Git Clone"){
 
          git credentialsId: 'Git-Hub-Credentials', url: "https://github.com/Devendra61/bentoml_ccfd.git"
